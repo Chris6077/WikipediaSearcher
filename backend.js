@@ -6,7 +6,7 @@ $(document).ready(function(){
 		return false;
 	});
 	makeURL = function(){
-		return "https://cors.io/?https://en.wikipedia.org/w/api.php?action=opensearch&search=" + $("#searchbar")[0].value + "&namespace=0&format=json";
+		return "https://en.wikipedia.org/w/api.php?action=opensearch&search=" + $("#searchbar")[0].value + "&namespace=0&origin=*&format=json";
 	};
 	getResults = function(){
 		$.getJSON(makeURL(), function(data){
