@@ -1,9 +1,6 @@
 $(document).ready(function(){
 	$("#form").submit(function(){
-		for(var idx = 0; idx < $("#entry").length; idx++){
-			$("#entry").remove();
-		}
-		console.log("searched " + $("#searchbar")[0].value);
+		$("#allres").remove();
 		getResults();
 		$("#searchbar")[0].value = "";
 		return false;
@@ -13,6 +10,8 @@ $(document).ready(function(){
 	};
 	getResults = function(){
 		$.getJSON(makeURL(), function(data){
+			var div = document.createElement("div");
+			div.id = "allres";
 			for(var idx = 0; idx < data[1].length; idx++){
 				var curr = document.createElement("div");
 				curr.id = "entry";
@@ -26,10 +25,9 @@ $(document).ready(function(){
 				desc.innerHTML = data[2][idx];
 				link.appendChild(desc);
 				curr.appendChild(link);
-				$("#form").append(curr);
+				div.appendChild(curr);
 			}
-			var title, description, link;
-			title = data[1][4];
+			$("#form").append(div);
 		});
 	};
 });
