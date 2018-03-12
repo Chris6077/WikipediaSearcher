@@ -14,12 +14,12 @@ $(document).ready(function(){
 			div.id = "allres";
 			for(var idx = 0; idx < data[1].length; idx++){
 				var curr = document.createElement("div");
-				curr.id = "entry";
+				curr.id = "entry"; // yes id is semi prof but i don't want to fix this xD
 				var link = document.createElement("a");
 				link.href = data[3][idx];
 				var title = document.createElement("p");
 				title.innerHTML = data[1][idx];
-				title.id = "title";
+				title.id = "title"; // yes id is semi prof but i don't want to fix this xD
 				link.appendChild(title);
 				var desc = document.createElement("p");
 				desc.innerHTML = data[2][idx];
