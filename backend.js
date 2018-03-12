@@ -1,5 +1,8 @@
 $(document).ready(function(){
 	$("#form").submit(function(){
+		for(var idx = 0; idx < $("#entry").length; idx++){
+			$("#entry").remove();
+		}
 		console.log("searched " + $("#searchbar")[0].value);
 		getResults();
 		$("#searchbar")[0].value = "";
