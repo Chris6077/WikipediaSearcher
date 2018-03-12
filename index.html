@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 	<html lang="en">
 		<head>
+			<!-- search bar from https://codepen.io/anon/pen/rOLrXm-->
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  			<title>TITLE</title>
+  			<title>Wikipedia Viewer</title>
   			<link rel="stylesheet" href="./style.css"/>
   			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  			<script src="./backend.js"></script>
         <link rel="icon" href="https://raw.githubusercontent.com/Chris6077/Portfolio/master/images/logo.png">
 			<style type="text/css">
 			</style>
 		</head>
 		<body>
     		<div class="container">
+    			<a id="random" href="https://en.wikipedia.org/wiki/Special:Random">Random</a>
+    			<form id="form">
+  					<input id="searchbar" type="search" placeholder="Search...">
+				</form>
   			</div>
   			<div id="footer">
                 <div class="col-md-8">
